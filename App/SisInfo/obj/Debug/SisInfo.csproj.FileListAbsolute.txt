@@ -1,0 +1,11 @@
+C:\Users\USER\source\repos\SisInfo\SisInfo\bin\Debug\SisInfo.exe.config
+C:\Users\USER\source\repos\SisInfo\SisInfo\bin\Debug\SisInfo.exe
+C:\Users\USER\source\repos\SisInfo\SisInfo\bin\Debug\SisInfo.pdb
+C:\Users\USER\source\repos\SisInfo\SisInfo\obj\Debug\SisInfo.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\SisInfo\SisInfo\obj\Debug\SisInfo.Inicio.resources
+C:\Users\USER\source\repos\SisInfo\SisInfo\obj\Debug\SisInfo.Prestamo.resources
+C:\Users\USER\source\repos\SisInfo\SisInfo\obj\Debug\SisInfo.Properties.Resources.resources
+C:\Users\USER\source\repos\SisInfo\SisInfo\obj\Debug\SisInfo.csproj.GenerateResource.cache
+C:\Users\USER\source\repos\SisInfo\SisInfo\obj\Debug\SisInfo.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\SisInfo\SisInfo\obj\Debug\SisInfo.exe
+C:\Users\USER\source\repos\SisInfo\SisInfo\obj\Debug\SisInfo.pdb
