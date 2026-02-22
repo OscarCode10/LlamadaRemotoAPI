@@ -1,0 +1,6 @@
+@LlamadaRemota_HostAddress = http://localhost:5023
+
+GET {{LlamadaRemota_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
