@@ -1,34 +1,36 @@
 ﻿using Dapper;
-using MySqlConnector;
+using Microsoft.Data.SqlClient;
+using System.Data;
+
 namespace LlamadaRemota.Repositories
 {
     public class CreditosRepository : ICreditosRepository
     {
-        private readonly MySqlConfiguration _mySqlConfiguration;
+        private readonly string _connectionString;
 
-        public CreditosRepository(MySqlConfiguration mySqlConfiguration)
+        public CreditosRepository(IConfiguration configuration)
         {
-            _mySqlConfiguration = mySqlConfiguration;
+            _connectionString = configuration.GetConnectionString("SqlServerConnection");
         }
 
-        protected MySqlConnection DbConnection()
+        protected IDbConnection DbConnection()
         {
-            return new MySqlConnection(_mySqlConfiguration.ConnectionString);
+            return new SqlConnection(_connectionString);
         }
 
         public bool CreateCredito(CreditosRealizado creditosRealizado)
         {
-            var db = DbConnection();
+            using (var db = DbConnection())
+            {
+                var sql = @"INSERT INTO creditosRealizado
+                            (idCliente, idFondosCredito, fechaCredito, valorPrestado, noCuotas)
+                            VALUES
+                            (@IdCliente, @IdFondosCredito, @FechaCredito, @ValorPrestado, @NoCuotas)";
 
-            var sql = @"INSERT INTO creditosRealizado
-                (idCliente, idFondosCredito, fechaCredito, valorPrestado, noCuotas)
-                VALUES
-                (@IdCliente, @IdFondosCredito, @FechaCredito, @ValorPrestado, @NoCuotas)";
+                var result = db.Execute(sql, creditosRealizado);
 
-            var result = db.Execute(sql, creditosRealizado);
-
-            return result > 0;
+                return result > 0;
+            }
         }
-
     }
 }
