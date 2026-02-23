@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "apis1": {
+      "restored": true,
+      "restoreTime": "2026-02-23T02:24:05.7571769Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2026-02-23T02:24:53.2832474Z"
+    }
+  },
+  "parameters": {
+    "apis1.resourceGroupName": {
+      "Name": "apis1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "llamadaRemota"
+    },
+    "apis1.subscriptionId": {
+      "Name": "apis1.subscriptionId",
+      "Type": "subscription",
+      "Value": "0ce231ad-b1f4-4912-ac5b-bfa37919ff6a"
+    }
+  }
+}

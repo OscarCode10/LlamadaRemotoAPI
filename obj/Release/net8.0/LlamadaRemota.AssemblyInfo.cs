@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LlamadaRemota")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b91d5b5c1fe9ce027a1830c9587fd876cf1b73a0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9aa864d7cb933d3ff54cb64cb709d3b9f4eaf34c")]
 [assembly: System.Reflection.AssemblyProductAttribute("LlamadaRemota")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LlamadaRemota")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

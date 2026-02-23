@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using Microsoft.Data.SqlClient;
 using System.Data;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace LlamadaRemota.Repositories
 {
@@ -21,11 +22,18 @@ namespace LlamadaRemota.Repositories
         public bool CreateCredito(CreditosRealizado creditosRealizado)
         {
             using (var db = DbConnection())
+
             {
-                var sql = @"INSERT INTO creditosRealizado
+                var dbName = db.QuerySingle<string>("SELECT DB_NAME()");
+                Console.WriteLine($"Base actual: {dbName}");
+                var server = db.QuerySingle<string>("SELECT @@SERVERNAME");
+                Console.WriteLine($"Servidor: {server}");
+
+                    var sql = @"INSERT INTO dbo.creditosRealizado
                             (idCliente, idFondosCredito, fechaCredito, valorPrestado, noCuotas)
                             VALUES
                             (@IdCliente, @IdFondosCredito, @FechaCredito, @ValorPrestado, @NoCuotas)";
+
 
                 var result = db.Execute(sql, creditosRealizado);
 
